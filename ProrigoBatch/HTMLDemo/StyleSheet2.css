@@ -1,0 +1,11 @@
+﻿p{
+    text-align :center;
+    font-size : 20px;
+    font-family : 'Times New Roman', Times, serif;
+    word-spacing : 8px;
+    font-style : italic;
+}
+
+p::first-letter{
+    font-size : 25px;
+}

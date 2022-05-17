@@ -13,6 +13,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2", "..\Wind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database-WinForm", "..\Database-WinForm\Database-WinForm.csproj", "{2975B30E-CDC8-4CF4-8A0E-C255B03CD371}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataModelEntityRelationship", "..\DataModelEntityRelationship\DataModelEntityRelationship.csproj", "{F636EA84-FF99-4B6B-A3D7-47B1E637BD13}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Development", "Web Development", "{89531B23-5725-43B5-A2E9-1534501EE0D4}"
+	ProjectSection(SolutionItems) = preProject
+		HTMLPage1.html = HTMLPage1.html
+		..\..\..\..\Downloads\nature.jpg = ..\..\..\..\Downloads\nature.jpg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +47,10 @@ Global
 		{2975B30E-CDC8-4CF4-8A0E-C255B03CD371}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2975B30E-CDC8-4CF4-8A0E-C255B03CD371}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2975B30E-CDC8-4CF4-8A0E-C255B03CD371}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F636EA84-FF99-4B6B-A3D7-47B1E637BD13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F636EA84-FF99-4B6B-A3D7-47B1E637BD13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F636EA84-FF99-4B6B-A3D7-47B1E637BD13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F636EA84-FF99-4B6B-A3D7-47B1E637BD13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,11 +1,10 @@
-﻿using Database_WinForm.day09052022;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Database_WinForm
+namespace DataModelEntityRelationship
 {
     internal static class Program
     {
@@ -17,7 +16,7 @@ namespace Database_WinForm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new day11052022.Emp());
+            Application.Run(new Form1());
         }
     }
 }
