@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        function displaysuccess(data) {
+            let info = JSON.parse(data);
+            let text = "<div class='container'><table class='table table-condensed table - bordered'>";
+            for (let i = 0; i < info.length; i++) {
+                text += "<tr><td>" + info[i].userId + "</td><td>" + info[i].id + "</td><td>" + info[i].title + "</td><<td>" + info[i].completed + "</td></tr>";
+            }
+            text += "</table>";
+            document.getElementById("d1").innerHTML = text;
+
+        }
+        function displayerror(data) {
+            document.getElementById("d2").innerHTML = data;
+        }
+        var promise = new Promise(function (resolve, reject) {
+            let r = new XMLHttpRequest();
+            r.open('GET', "https://jsonplaceholder.typicode.com/todos/");
+            r.onload = function () {
+                if (r.status = 200) { // 200 is http status code
+                    resolve(r.response);
+                }
+                else {
+                    reject("Not able to load file");
+                }
+            };
+            r.send();
+        });
+        promise.then(function(value) {
+            displaysuccess(value);
+        }).catch(function (error) {
+            displayerror(error);
+        });
+
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+
+</body>
+</html>

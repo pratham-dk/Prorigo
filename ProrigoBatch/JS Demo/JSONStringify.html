@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        var emp = {};
+        emp.Id = 1;
+        emp.Name = "User";
+        
+    const employee = {
+        firstname: "Username",
+        lastname: "Last",
+        age: 30
+    }
+
+        const product = {
+        id:1,
+        name:"mouse",
+            price: 900,
+            discount:function() {
+              return  "discount is " +  this.price * 0.10;
+            }
+        
+    }
+    console.log(employee.firstname + employee["lastname"]);
+    console.log(product["name"] + product.price);
+        document.getElementById("d1").innerHTML = JSON.stringify(product);
+        document.getElementById("d2").innerHTML = product.discount();
+
+
+        const marks = {
+            rollno: 1,
+            name: "prathamesh",
+            eng: 95,
+            hindi: 90,
+            marathi: 96,
+            percent: function () {
+                return ((this.eng + this.hindi + this.marathi) / 300) * 100;
+            },
+            display:function() {
+                return "Roll NO: " + this.rollno + "Name:  " + this.name + " Percentage:  " + this.percent();
+            }
+        }
+
+        document.getElementById("d2").innerHTML = marks.display();
+
+
+
+
+    </script>
+
+</body>
+</html>

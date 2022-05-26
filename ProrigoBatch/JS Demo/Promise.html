@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        function display(data) {
+            document.getElementById("d1").innerHTML = data;
+        }
+
+        var promise = new Promise(function (resolve, reject) {
+            let x = 11;
+            if (x == 10) {
+                resolve("code get executed sucessfully");
+            }
+            else {
+                reject("Error in the code");
+            }
+        });
+
+        promise.then(function (value) {
+            display(value);
+        }, function (error) {
+            display(error);
+        });
+
+
+
+
+        var color = ["Red", "Green", "Blue"];
+
+        function display(data) {
+            var text = "<ul>";
+            for (let i = 0; i < data.length; i++) {
+                text += "<li>" + data[i] + "</li>";
+            }
+            text += "</ul>";
+
+            document.getElementById("d1").innerHTML = text;
+        }
+
+
+        function displayerror(data) {
+            document.getElementById("d2").innerHTML = data;
+        }
+
+        var promise = new Promise(function (resolve, reject) {
+            if (color != null) {
+                resolve(color);
+            }
+            else {
+                reject("Error in the code");
+            }
+
+        });
+
+        promise.then(function (value) {
+            display(value);
+        }).catch(function (error) {
+            displayerror(error);
+        });
+    </script>
+</body>
+</html>

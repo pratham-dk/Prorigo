@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <p>Enter First Number</p>
+    <input type="text" id="firstnum" />
+    <p>Enter Second Number</p>
+    <input type="text" id="secnum" /><br />
+    <br />
+    <button onclick="add()">Addition</button>
+    <button onclick="substract()">Substraction</button>
+    <button onclick="mult()">Multiplication</button>
+    <button onclick="div()">Division</button>
+    <p id="disp" style="font-size:30px"></p>
+
+    <script>
+
+
+        function add() {
+            var a = parseInt(document.getElementById("firstnum").value);
+            var b = parseInt(document.getElementById("secnum").value);
+            var c = a + b;
+            document.getElementById("disp").innerHTML = "Addition is " + c;
+        }
+
+        function substract() {
+            var a = parseInt(document.getElementById("firstnum").value);
+            var b = parseInt(document.getElementById("secnum").value);
+            var c = a - b;
+            document.getElementById("disp").innerHTML = "Substraction is " + c;
+        }
+
+
+        function mult() {
+            var a = parseInt(document.getElementById("firstnum").value);
+            var b = parseInt(document.getElementById("secnum").value);
+            var c = a * b;
+            document.getElementById("disp").innerHTML = "Multiplication  is " + c;
+        }
+
+
+        function div() {
+            var a = parseInt(document.getElementById("firstnum").value);
+            var b = parseInt(document.getElementById("secnum").value);
+            var c = a / b;
+            document.getElementById("disp").innerHTML = "Division is " + c;
+        }
+    </script>
+
+</body>
+</html>

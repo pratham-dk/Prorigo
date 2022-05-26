@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+<script>
+    var a = 10;
+    const pi = 3.14;
+
+    function f1()
+    {
+        var a = 20;
+        const pi = 3.15;
+        console.log("inside f1 " + "a= "+ a +"pi= " +  pi);
+    }
+
+    function f2()
+    {
+      
+        console.log("inside f2 " + "a= " + a + "pi= " + pi);
+    }
+
+    {
+        let a = 50;
+        console.log("inside block " +  "a= " + a + "pi= " + pi);
+    }
+
+    f1();
+    f2();
+</script>
+    
+</body>
+</html>

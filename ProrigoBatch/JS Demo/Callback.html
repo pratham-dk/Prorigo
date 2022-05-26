@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1">   </div>
+    <script>
+        function add(a, b, mycallback) {
+            let sum = a + b;
+            mycallback(sum);
+        }
+
+        function display(sum) {
+            document.getElementById("d1").innerHTML = "addition is " + sum;
+
+        }
+        add(56, 63, display);
+    </script>
+</body>
+</html>
