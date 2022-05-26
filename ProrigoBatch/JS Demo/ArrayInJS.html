@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <script>
+        var colors = ["red", "green", "blue", "black"];
+
+        colors.push("pink");
+        colors.unshift("white");
+        //colors.pop();
+       // colors.shift();
+        var data = "<ul type='circle'>";
+
+        for (let i = 0; i < colors.length;i++) {
+            data += "<li>" + colors[i] + "</li>";
+        }
+
+        data += "</ul>";
+        console.log(data);
+        document.getElementById("d1").innerHTML = data;
+
+
+
+        var city = ["Pune", "Mumbai", "Nashik", "Nagpur"];
+
+        var data = "<ul type='circle'>";
+        for (let i = 0; i < city.length; i++) {
+            data += "<li>" + city[i] + "</li>";
+        }
+
+        data += "</ul>";
+        console.log(data);
+        document.getElementById("d2").innerHTML = data;
+
+
+
+        var colors2 = ["red", "green", "blue", "black"];
+        console.log(colors2.splice(3, 0, "White", "Pink"));
+        var data = "<ul type='circle'>";
+
+        for (let i = 0; i < colors.length; i++) {
+            data += "<li>" + colors[i] + "</li>";
+        }
+
+        data += "</ul>";
+        console.log(data);
+        document.getElementById("d1").innerHTML = data;
+        //splice
+        //sort
+        //reverse
+
+
+        var num1 = [14000, 104, 99]; 
+        num1.sort(function (a, b) { return a-b}); //logic to properly sort if default sort does not work
+        document.getElementById("d1").innerHTML = num1;
+       // document.getElementById("d1").innerHTML = num1.sort();
+         //   document.getElementById("d1").innerHTML = num1.reverse();
+       // document.getElementById("d1").innerHTML = num1.splice(0,3,4,4);
+
+
+    </script>
+
+</body>
+</html>

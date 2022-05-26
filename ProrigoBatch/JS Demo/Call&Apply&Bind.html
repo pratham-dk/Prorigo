@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+    <script>
+        const employee = {
+            age: 30,
+            fullName: function (city, country) {
+                return this.firstName + " " + this.lastName + " " + city + " " + country;
+            }
+        }
+
+        const member = {
+            firstName: "User",
+            lastName: "User"
+        }
+
+        document.getElementById("d1").innerHTML = employee.fullName.call(member, "Pune", "India");
+        document.getElementById("d2").innerHTML = employee.fullName.apply(member, ["Pune", "India"]);
+
+
+        const emp1 = {
+            age: 30,
+            fullName: function () {
+                return this.firstName + " " + this.lastName;
+            }
+        }
+        let empinfo = emp1.fullName.bind(member);
+        document.getElementById("d3").innerHTML = empinfo();
+    </script>
+</body>
+</html>

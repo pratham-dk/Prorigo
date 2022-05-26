@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+</head>
+<body>
+    <div id="d1"></div>
+    <div id="d2"></div>
+    <div id="d3"></div>
+
+
+    <script>
+        var employee = [
+            {
+                firstname: "Prathamesh",
+                lastname: "Dixit",
+                city: "Pune"
+            },
+            {
+                firstname: "Atharva",
+                lastname: "Dixit",
+                city: "Pune"
+            },
+            {
+                firstname: "Pranav",
+                lastname: "Dixit",
+                city: "Pune"
+            }
+        ];
+
+        var data = "<table class='table'><tr><th>First Name</th><th>Last Name</th><th>City</th>";
+        for (let i = 0; i < employee.length; i++) {
+            data += "<tr><td>" + employee[i].firstname + "</td><td>" + employee[i].lastname + "</td><td>" + employee[i].city + "</td></tr>";
+        }
+        data += "</table><br><br>";
+
+        document.getElementById("d1").innerHTML = data;
+
+        var student = [
+            {
+                rollno: 1,
+                firstname: "Suresh",
+                lastname: "Shinde"
+            },
+            {
+                rollno: 2,
+                firstname: "Ramesh",
+                lastname: "Patil"
+            },
+            {
+                rollno: 3,
+                firstname: "Prasad",
+                lastname: "Khandekar"
+            }
+        ];
+
+        var data = "<table class='table'><tr><th>Roll No</th><th>First Name</th><th>Last Name</th>";
+        for (let i = 0; i < student.length; i++) {
+            data += "<tr><td>" + student[i].rollno + "</td><td>" + student[i].firstname + "</td><td>" + student[i].lastname + "</td></tr>";
+        }
+        data += "</table><br><br>";
+
+        document.getElementById("d2").innerHTML = data;
+
+        var product = [
+            {
+                prodid: 1001,
+                prodname: "Bucket",
+                prodtcat: "Domestic"
+            },
+            {
+                prodid: 1002,
+                prodname: "Bat",
+                prodtcat: "Sports"
+            },
+            {
+                prodid: 1003,
+                prodname: "Wire",
+                prodtcat: "Electrical"
+            },
+        ];
+
+        var data = "<table class='table'><tr><th>Product Id</th><th>Product Name</th><th>Product Category</th>";
+        for (let i = 0; i < employee.length; i++) {
+            data += "<tr><td>" + product[i].prodid + "</td><td>" + product[i].prodname + "</td><td>" + product[i].prodcat + "</td></tr>";
+        }
+        data += "</table><br><br>";
+
+        document.getElementById("d3").innerHTML = data;
+    </script>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</body>
+</html>

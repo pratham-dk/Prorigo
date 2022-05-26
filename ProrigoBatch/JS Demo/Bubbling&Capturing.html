@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="parent">
+        <button type="button">Parent</button>
+        <div id="child">
+            <button type="button">Child</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("parent").addEventListener("click", function () {
+            alert("inside parent");
+
+        }, true);
+
+        document.getElementById("child").addEventListener("click", function () {
+            alert("inside child");
+
+        }, false);
+    </script>
+</body>
+</html>

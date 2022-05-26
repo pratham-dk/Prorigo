@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <script>
+        setTimeout(function () {
+            document.getElementById("d1").innerHTML = "Hello";
+        }, 2000)
+        function showtime() {
+            let d = new Date();
+            let result = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+            document.getElementById("d1").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

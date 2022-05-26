@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <div id="d1"></div>
+    <input type="text" id="t1" /><br />
+    <button onclick="addfront()">Add In Front</button>
+    <button onclick="addback()">Add In Back</button>
+    <button onclick="removefront()">Remove from Front</button>
+    <button onclick="removeback()">Remove from Back</button>
+
+    <script>
+        var colors = ["red","green","blue","black"];
+       
+        var data = "<ol>";
+
+        for (let i = 0; i < colors.length; i++) {
+            data += "<li>" + colors[i] + "</li>";
+        }
+
+        data += "</ol>";
+        console.log(data);
+        document.getElementById("d1").innerHTML = data;
+        function addfront()
+        {
+            data = " ";
+            var t = document.getElementById("t1").value;
+            colors.unshift(t);
+
+            var data = "<ul>";
+
+            for (let i = 0; i < colors.length; i++) {
+                data += "<li>" + colors[i] + "</li>";
+            }
+
+            data += "</ul>";
+            console.log(data);
+            document.getElementById("d1").innerHTML = data;
+        }
+
+        function addback() {
+            data = " ";
+            var t = document.getElementById("t1").value;
+            colors.push(t);
+
+            var data = "<ul>";
+
+            for (let i = 0; i < colors.length; i++) {
+                data += "<li>" + colors[i] + "</li>";
+            }
+
+            data += "</ul>";
+            console.log(data);
+            document.getElementById("d1").innerHTML = data;
+
+        }
+
+        function removeback() {
+            data = " ";
+            var t = document.getElementById("t1").value;
+            colors.pop();
+
+            var data = "<ul>";
+
+            for (let i = 0; i < colors.length; i++) {
+                data += "<li>" + colors[i] + "</li>";
+            }
+
+            data += "</ul>";
+            console.log(data);
+            document.getElementById("d1").innerHTML = data;
+
+        }
+
+        function removefront() {
+            data = " ";
+            colors.shift();
+
+            var data = "<ul>";
+
+            for (let i = 0; i < colors.length; i++) {
+                data += "<li>" + colors[i] + "</li>";
+            }
+
+            data += "</ul>";
+            console.log(data);
+            document.getElementById("d1").innerHTML = data;
+        }
+
+    </script>
+
+</body>
+</html>
