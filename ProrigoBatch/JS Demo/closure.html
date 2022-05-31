@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+
+    <input type="button" value="Count" onclick="display()" />
+    <div id="d1"></div>
+
+<script>
+    const result = (
+        function () {
+            let counter = 0;
+            return function () {  // closures
+                counter++;
+                return counter;
+            }
+        })();
+
+    const result2 = (
+        () => {
+            let counter = 0;
+            return () => {  // closures
+                counter++;
+                return counter;
+            }
+        })();
+
+    function display() {
+
+        document.getElementById("d1").innerHTML = result2();
+    }
+
+</script>
+
+
+
+</body>
+</html>
